@@ -48,6 +48,10 @@ public class Publisher extends Main {
     public void setCountry(String country) {
         this.country = country;
     }
+
+    public void setName() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
     
     
     

@@ -23,7 +23,7 @@ public class Book extends Main {
     @OneToMany
     List <Author> author = new ArrayList<>(); //1 knjiga vise autora
     @ManyToOne
-    private Publisher publisher; //1 knjiga 1 izdavac
+    private Publisher publisher; //vise knjiga 1 izdavac
 
     public String getTitle() {
         return title;
