@@ -44,8 +44,9 @@
         <!-- Ovdje navodimo mapirane klase -->
         <mapping class="finalproject.model.Author"/>
         <mapping class="finalproject.model.Book"/>
-        <mapping class="finalproject.model.Publisher"/>
-        <mapping class="finalproject.model.User"/> 
-        <mapping class="finalproject.model.Review"/>         
+        <mapping class="finalproject.model.Category"/>  
+        <mapping class="finalproject.model.Publisher"/>        
+        <mapping class="finalproject.model.Review"/>   
+        <mapping class="finalproject.model.User"/>             
     </session-factory>
 </hibernate-configuration>

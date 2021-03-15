@@ -11,7 +11,7 @@ import javax.persistence.MappedSuperclass;
  * @author natalis
  */
 @MappedSuperclass
-public abstract class Main {
+public abstract class AbstractEntity {
    @Id
    @GeneratedValue(strategy=GenerationType.IDENTITY)
     

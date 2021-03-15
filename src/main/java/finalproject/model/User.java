@@ -10,7 +10,7 @@ import javax.persistence.Table;
  */
 @Entity
 @Table (name="user")
-public class User extends Main {
+public class User extends AbstractEntity {
     
     private String first_name;
     private String last_name;

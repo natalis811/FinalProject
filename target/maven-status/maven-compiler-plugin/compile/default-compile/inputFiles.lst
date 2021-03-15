@@ -1,9 +1,10 @@
 /Users/natalis/jp23/netbeans/FinalProject/src/main/java/finalproject/model/User.java
 /Users/natalis/jp23/netbeans/FinalProject/src/main/java/finalproject/Start.java
 /Users/natalis/jp23/netbeans/FinalProject/src/main/java/finalproject/model/Book.java
+/Users/natalis/jp23/netbeans/FinalProject/src/main/java/finalproject/model/Category.java
 /Users/natalis/jp23/netbeans/FinalProject/src/main/java/finalproject/model/Author.java
 /Users/natalis/jp23/netbeans/FinalProject/src/main/java/finalproject/util/HibernateUtil.java
 /Users/natalis/jp23/netbeans/FinalProject/src/main/java/finalproject/util/InitData.java
-/Users/natalis/jp23/netbeans/FinalProject/src/main/java/finalproject/model/Main.java
+/Users/natalis/jp23/netbeans/FinalProject/src/main/java/finalproject/model/AbstractEntity.java
 /Users/natalis/jp23/netbeans/FinalProject/src/main/java/finalproject/model/Publisher.java
 /Users/natalis/jp23/netbeans/FinalProject/src/main/java/finalproject/model/Review.java

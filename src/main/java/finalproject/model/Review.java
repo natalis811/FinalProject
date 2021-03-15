@@ -12,15 +12,15 @@ import javax.persistence.Table;
  */
 @Entity
 @Table (name="review")
-public class Review extends Main {
+public class Review extends AbstractEntity {
     
     private String text;
     private Integer rating;
     private Date date;
     @ManyToOne
-    private Book book; //vise osvrta za 1 knjigu
+    private Book book; //vise recenzija za 1 knjigu
     @ManyToOne
-    private User user; //vise osvrta od 1 korisnika?
+    private User user; //vise recenzija od 1 korisnika?
 
     public String getText() {
         return text;
