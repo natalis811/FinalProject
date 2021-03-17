@@ -6,9 +6,11 @@ import finalproject.model.Author;
 import finalproject.model.Book;
 import finalproject.model.Category;
 import finalproject.model.Publisher;
+import finalproject.model.Review;
 import finalproject.model.User;
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.Date;
 import java.util.List;
 import java.util.Random;
 import org.hibernate.Session;
@@ -19,6 +21,8 @@ import org.hibernate.Session;
  */
 public class InitData {
 
+    private static Date date;
+
     
     public static void start (){
         
@@ -26,8 +30,10 @@ public class InitData {
         
         s.beginTransaction();
         
+        //unosenje podataka pomocu faker-a
         Faker faker = new Faker();
-        
+       
+       
         for (int i=0; i<10; i++) {
             User u = new User ();
             u.setFirst_name(faker.name().firstName());
@@ -43,7 +49,44 @@ public class InitData {
             s.save(a);
             authors.add(a);
         }
+        
+        //unosenje podataka pomocu faker-a za book
+        //faker.book().author();
+        //faker.book().publisher();
+        //faker.book().title();
+        
+        for (int i=0; i<10;i++){
+          Book book3 = new Book();
+          book3.setTitle(faker.book().title());
+          s.save(book3);      
+        } 
+        
+        
+        for (int i=0; i<10; i++){
+            Author author1 = new Author();
+            author1.setFirst_name(faker.book().author());
+            author1.setLast_name(faker.book().author());
+            s.save(author1);
+        }
             
+        
+        
+        for (int i=0; i<10; i++){
+            Publisher publisher3 = new Publisher();
+            publisher3.setName(faker.book().publisher());
+            publisher3.setAddress(faker.book().publisher());
+            publisher3.setCity(faker.book().publisher());
+            publisher3.setCountry(faker.book().publisher());
+            s.save(publisher3);
+        }
+        
+        //rucno unosenje podataka
+         
+        User user1 = new User ();
+        user1.setFirst_name("Natalija");
+        user1.setLast_name("Santek");
+        s.save(user1);
+         
         Publisher publisher1 = new Publisher (); 
         publisher1.setName("Školska knjiga");
         publisher1.setAddress("Zagrebačka 24");
@@ -86,23 +129,15 @@ public class InitData {
         ));
         book2.setPublisher(publisher2);
         s.save(book2);
-            
-        //@GetMapping("/books")
-        //public JsonNode getRandomBook() {
-
-        //Faker faker = new Faker(new Locale("en-US"));
-        //ArrayNode books = objectMapper.createArrayNode();
-
-        //for (int i = 0; i < 10; i++) {
-        //books.add(objectMapper.createObjectNode()
-        //.put("author", faker.book().author())
-        //.put("genre", faker.book().genre())
-        //.put("publisher", faker.book().publisher())
-       // .put("title", faker.book().title()));
-   // }
-
-        //return books;            
         
+        Review review1 = new Review();
+        review1.setText("Ovo je proba");
+        review1.setRating(1);
+        review1.setDate(date = new Date());
+        review1.setBook(book2);
+        review1.setUser(user1);
+        s.save(review1);
+                             
         s.getTransaction().commit();
     }
     
