@@ -16,10 +16,12 @@ import org.hibernate.Session;
 public class IntroScreen extends javax.swing.JFrame {
     
     public IntroScreen() {
-        initComponents(); //vidi zasto javlja gresku
+        initComponents();
         Loading load = new Loading();
         load.start();
     }
+
+    
 
     private class Loading extends Thread {
 
@@ -35,7 +37,7 @@ public class IntroScreen extends javax.swing.JFrame {
         }
 
     }
-    }
+    
 
     /**
      * This method is called from within the constructor to initialize the form.
@@ -51,7 +53,7 @@ public class IntroScreen extends javax.swing.JFrame {
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
         jLabel1.setFont(new java.awt.Font("Arial Black", 2, 13)); // NOI18N
-        jLabel1.setText("jLabel1");
+        jLabel1.setText("LOADING");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -72,11 +74,11 @@ public class IntroScreen extends javax.swing.JFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
-
-   
+ 
   
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel jLabel1;
     // End of variables declaration//GEN-END:variables
-}}
+
+        }
