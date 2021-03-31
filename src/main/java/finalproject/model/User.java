@@ -3,6 +3,8 @@ package finalproject.model;
 
 import javax.persistence.Entity;
 import javax.persistence.Table;
+import javax.validation.constraints.NotEmpty;
+import javax.validation.constraints.NotNull;
 
 /**
  *
@@ -10,27 +12,35 @@ import javax.persistence.Table;
  */
 @Entity
 @Table (name="user")
-public class User extends AbstractEntity {
+public class User extends Person {
     
-    private String first_name;
-    private String last_name;
+    @NotNull(message = "Email cannot be NULL")
+    @NotEmpty(message = "Email cannot be empty")
+    private String email;
+    
+    @NotNull(message = "Password cannot be NULL")
+    @NotEmpty(message = "Password cannot be empty")
+    private String password;
 
-    public String getFirst_name() {
-        return first_name;
+    public String getEmail() {
+        return email;
     }
 
-    public void setFirst_name(String first_name) {
-        this.first_name = first_name;
+    public void setEmail(String email) {
+        this.email = email;
     }
 
-    public String getLast_name() {
-        return last_name;
+    public String getPassword() {
+        return password;
     }
 
-    public void setLast_name(String last_name) {
-        this.last_name = last_name;
+    public void setPassword(String password) {
+        this.password = password;
+    }
+    public String getFirstNameLastName(){
+        return getFirstName()+ " " + getLastName();
     }
     
     
     
-}
+}   

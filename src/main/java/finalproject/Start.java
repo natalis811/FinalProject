@@ -3,6 +3,7 @@ package finalproject;
 
 import finalproject.util.HibernateUtil;
 import finalproject.util.InitData;
+import finalproject.view.IntroScreen;
 import org.hibernate.Session;
 
 /**
@@ -16,7 +17,9 @@ public class Start {
         //Session s = HibernateUtil.getSession();
         
         //System.out.println(s.getMetamodel().getEntities().size());
-        InitData.start();      
+        //InitData.start(); 
+        
+        new IntroScreen().setVisible(true);
         
     }
     

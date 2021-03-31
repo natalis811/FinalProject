@@ -19,7 +19,7 @@ public class Book extends AbstractEntity implements Serializable {
     private Integer published;
     private String isbn;
    
-    @ManyToOne(optional = true)  
+    @ManyToOne(optional = true) //znaci da nije obavezno staviti category  
     private Category category; //vise knjiga ista kategorija
     
     @ManyToMany

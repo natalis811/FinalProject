@@ -14,7 +14,7 @@ import org.hibernate.boot.registry.StandardServiceRegistryBuilder;
 
 public class HibernateUtil {
     
-     private static StandardServiceRegistry registry;
+    private static StandardServiceRegistry registry;
     private static Session session;
     
     public static Session getSession() {

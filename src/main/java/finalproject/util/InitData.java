@@ -36,16 +36,16 @@ public class InitData {
        
         for (int i=0; i<10; i++) {
             User u = new User ();
-            u.setFirst_name(faker.name().firstName());
-            u.setLast_name(faker.name().lastName());        
+            u.setFirstName(faker.name().firstName());
+            u.setLastName(faker.name().lastName());        
             s.save(u);        
         }
         
         List <Author> authors = new ArrayList<>();
         for (int i=0; i<10; i++) {            
             Author a = new Author();
-            a.setFirst_name(faker.name().firstName());
-            a.setLast_name (faker.name().lastName());
+            a.setFirstName(faker.name().firstName());
+            a.setLastName (faker.name().lastName());
             s.save(a);
             authors.add(a);
         }
@@ -64,8 +64,8 @@ public class InitData {
         
         for (int i=0; i<10; i++){
             Author author1 = new Author();
-            author1.setFirst_name(faker.book().author());
-            author1.setLast_name(faker.book().author());
+            author1.setFirstName(faker.book().author());
+            author1.setLastName(faker.book().author());
             s.save(author1);
         }
             
@@ -83,8 +83,8 @@ public class InitData {
         //rucno unosenje podataka
          
         User user1 = new User ();
-        user1.setFirst_name("Natalija");
-        user1.setLast_name("Santek");
+        user1.setFirstName("Natalija");
+        user1.setLastName("Santek");
         s.save(user1);
          
         Publisher publisher1 = new Publisher (); 
