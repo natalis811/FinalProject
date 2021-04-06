@@ -21,6 +21,17 @@ public class User extends Person {
     @NotNull(message = "Password cannot be NULL")
     @NotEmpty(message = "Password cannot be empty")
     private String password;
+    
+    private boolean admin;
+
+    public boolean isAdmin() {
+        return admin;
+    }
+
+    public void setAdmin(boolean admin) {
+        this.admin = admin;
+    }
+    
 
     public String getEmail() {
         return email;

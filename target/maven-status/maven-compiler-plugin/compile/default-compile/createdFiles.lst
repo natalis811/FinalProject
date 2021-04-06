@@ -13,8 +13,11 @@ finalproject/util/CreateUser.class
 finalproject/model/Category.class
 finalproject/view/Authorisation$3.class
 finalproject/view/Authorisation.class
+finalproject/controller/CategoryController.class
 finalproject/util/HibernateUtil.class
+finalproject/view/CategoryForm$1.class
 finalproject/model/Person.class
+finalproject/view/CategoryForm.class
 finalproject/controller/UserController.class
 finalproject/model/User.class
 finalproject/view/Authorisation$1.class

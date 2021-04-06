@@ -7,6 +7,9 @@ package finalproject.model;
 
 import javax.persistence.Entity;
 import javax.persistence.Table;
+import javax.validation.constraints.NotEmpty;
+import javax.validation.constraints.NotNull;
+import javax.validation.constraints.Size;
 
 /**
  *
@@ -16,6 +19,8 @@ import javax.persistence.Table;
 @Table (name="category")
 public class Category extends AbstractEntity {
     
+    @NotNull (message="Category Name is obligatory(category is null)")
+    @NotEmpty (message="Category Name can not be empty")
     private String name;
 
     public String getName() {
@@ -25,5 +30,11 @@ public class Category extends AbstractEntity {
     public void setName(String name) {
         this.name = name;
     }
-    
+    @Override
+    public String toString() {
+        if(getName()==null || getName().trim().isEmpty()){
+            return "[Category Name is not defined.]";
+        }
+        return getName();
+    }
 }
