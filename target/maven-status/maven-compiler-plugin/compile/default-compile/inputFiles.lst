@@ -1,7 +1,9 @@
 /Users/natalis/jp23/netbeans/FinalProject/src/main/java/finalproject/model/User.java
+/Users/natalis/jp23/netbeans/FinalProject/src/main/java/finalproject/view/AuthorForm.java
 /Users/natalis/jp23/netbeans/FinalProject/src/main/java/finalproject/view/IntroScreen.java
 /Users/natalis/jp23/netbeans/FinalProject/src/main/java/finalproject/view/Menu.java
 /Users/natalis/jp23/netbeans/FinalProject/src/main/java/finalproject/Start.java
+/Users/natalis/jp23/netbeans/FinalProject/src/main/java/finalproject/view/CategoryForm.java
 /Users/natalis/jp23/netbeans/FinalProject/src/main/java/finalproject/controller/UserController.java
 /Users/natalis/jp23/netbeans/FinalProject/src/main/java/finalproject/util/BookException.java
 /Users/natalis/jp23/netbeans/FinalProject/src/main/java/finalproject/controller/PersonController.java
@@ -10,6 +12,7 @@
 /Users/natalis/jp23/netbeans/FinalProject/src/main/java/finalproject/util/HibernateUtil.java
 /Users/natalis/jp23/netbeans/FinalProject/src/main/java/finalproject/model/Person.java
 /Users/natalis/jp23/netbeans/FinalProject/src/main/java/finalproject/model/Publisher.java
+/Users/natalis/jp23/netbeans/FinalProject/src/main/java/finalproject/controller/CategoryController.java
 /Users/natalis/jp23/netbeans/FinalProject/src/main/java/finalproject/view/Application.java
 /Users/natalis/jp23/netbeans/FinalProject/src/main/java/finalproject/controller/AuthorController.java
 /Users/natalis/jp23/netbeans/FinalProject/src/main/java/finalproject/model/Book.java

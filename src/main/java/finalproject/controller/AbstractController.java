@@ -73,11 +73,11 @@ public abstract class AbstractController <T> {
          }     
     }
     
-    public T getEntitet() {
+    public T getEntity() {
         return entity;
     }
 
-    public void setEntitet(T entity) {
+    public void setEntity(T entity) {
         this.entity = entity;
     }
 

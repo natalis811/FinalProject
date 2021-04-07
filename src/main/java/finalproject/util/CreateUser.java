@@ -26,7 +26,7 @@ public class CreateUser {
         
         
         UserController uc = new UserController();
-        uc.setEntitet(u);
+        uc.setEntity(u);
         
         try {
             uc.create();

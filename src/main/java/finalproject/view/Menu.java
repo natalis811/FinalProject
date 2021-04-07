@@ -37,7 +37,7 @@ public class Menu extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        jmBookReview.setText("Book Review");
+        jmBookReview.setText("Menu");
         jmBookReview.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jmBookReviewActionPerformed(evt);
@@ -45,12 +45,22 @@ public class Menu extends javax.swing.JFrame {
         });
 
         jMenuItem1.setText("Category");
+        jMenuItem1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuItem1ActionPerformed(evt);
+            }
+        });
         jmBookReview.add(jMenuItem1);
 
         jMenuItem2.setText("Book");
         jmBookReview.add(jMenuItem2);
 
         jMenuItem3.setText("Author");
+        jMenuItem3.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuItem3ActionPerformed(evt);
+            }
+        });
         jmBookReview.add(jMenuItem3);
 
         jMenuItem4.setText("Publisher");
@@ -82,8 +92,16 @@ public class Menu extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jmBookReviewActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jmBookReviewActionPerformed
-                 
+              
     }//GEN-LAST:event_jmBookReviewActionPerformed
+
+    private void jMenuItem1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem1ActionPerformed
+        new CategoryForm().setVisible(true);
+    }//GEN-LAST:event_jMenuItem1ActionPerformed
+
+    private void jMenuItem3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem3ActionPerformed
+        new AuthorForm().setVisible(true);
+    }//GEN-LAST:event_jMenuItem3ActionPerformed
 
     
 
