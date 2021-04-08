@@ -3,6 +3,8 @@ package finalproject.model;
 
 import javax.persistence.Entity;
 import javax.persistence.Table;
+import javax.validation.constraints.NotEmpty;
+import javax.validation.constraints.NotNull;
 
 /**
  *
@@ -12,9 +14,20 @@ import javax.persistence.Table;
 @Table (name="publisher")
 public class Publisher extends AbstractEntity {
     
+    @NotNull (message="Publisher name is obligatory(category is null)")
+    @NotEmpty (message="Publisher name can not be empty") 
     private String name;
+    
+    @NotNull (message="Publisher address is obligatory(category is null)")
+    @NotEmpty (message="Publisher address can not be empty") 
     private String address;
+    
+    @NotNull (message="Publisher city is obligatory(category is null)")
+    @NotEmpty (message="Publisher city can not be empty") 
     private String city;
+    
+    @NotNull (message="Publisher country is obligatory(category is null)")
+    @NotEmpty (message="Publisher country can not be empty") 
     private String country;
 
     public String getName() {
@@ -49,9 +62,12 @@ public class Publisher extends AbstractEntity {
         this.country = country;
     }
 
-    public void setName() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+@Override
+    public String toString() {
+        
+       return  getName();
     }
+    
     
     
     

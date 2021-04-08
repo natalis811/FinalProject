@@ -1,8 +1,4 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
+
 package finalproject.model;
 
 import javax.persistence.Entity;
@@ -19,8 +15,8 @@ import javax.validation.constraints.Size;
 @Table (name="category")
 public class Category extends AbstractEntity {
     
-    @NotNull (message="Category Name is obligatory(category is null)")
-    @NotEmpty (message="Category Name can not be empty")
+    @NotNull (message="Category name is obligatory(category is null)")
+    @NotEmpty (message="Category name can not be empty")
     private String name;
 
     public String getName() {

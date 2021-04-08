@@ -229,7 +229,7 @@ public class AuthorForm extends javax.swing.JFrame {
         var entity=controller.getEntity();
         
         entity.setFirstName(txtFirstName.getText());
-        entity.setLastName(txtFirstName.getText());
+        entity.setLastName(txtLastName.getText());
     }
 
     private void clear() {

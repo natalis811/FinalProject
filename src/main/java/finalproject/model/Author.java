@@ -12,6 +12,14 @@ import javax.persistence.Table;
 @Table (name="author")
 public class Author extends Person {
     
+    @Override
+    public String toString() {
+        
+       return  getFirstName() + " "+ getLastName();
+    }
+    
+    
+    
 }
     
     

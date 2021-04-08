@@ -13,12 +13,12 @@ import javax.validation.constraints.NotNull;
 @MappedSuperclass
 public abstract class Person extends AbstractEntity {
     
-    @NotEmpty(message = "First name cannot be empty")
-    @NotNull(message = "First name cannot be NULL")
+    @NotEmpty(message = "First name can not be empty")
+    @NotNull(message = "First name can not be null")
     private String firstName;
     
-    @NotEmpty(message = "Last name cannot be empty")
-    @NotNull(message = "Last name cannot be NULL")
+    @NotEmpty(message = "Last name can not be empty")
+    @NotNull(message = "Last name can not be null")
     private String lastName;
 
     public String getFirstName() {

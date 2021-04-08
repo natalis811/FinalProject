@@ -1,7 +1,9 @@
 finalproject/Start.class
 finalproject/view/Application.class
+finalproject/view/PublisherForm$3.class
 finalproject/view/Authorisation$2.class
 finalproject/view/CategoryForm$2.class
+finalproject/view/Menu$4.class
 finalproject/controller/AuthorController.class
 finalproject/util/BookException.class
 finalproject/model/Review.class
@@ -12,6 +14,7 @@ finalproject/view/Menu$2.class
 finalproject/util/InitData.class
 finalproject/view/AuthorForm$3.class
 finalproject/model/Author.class
+finalproject/view/PublisherForm$1.class
 finalproject/controller/AbstractController.class
 finalproject/util/CreateUser.class
 finalproject/model/Category.class
@@ -21,10 +24,13 @@ finalproject/view/Authorisation.class
 finalproject/controller/CategoryController.class
 finalproject/util/HibernateUtil.class
 finalproject/view/CategoryForm$1.class
+finalproject/view/PublisherForm$4.class
 finalproject/model/Person.class
 finalproject/view/CategoryForm.class
 finalproject/controller/UserController.class
 finalproject/model/User.class
+finalproject/view/PublisherForm$2.class
+finalproject/controller/PublisherController.class
 finalproject/view/AuthorForm.class
 finalproject/view/Authorisation$1.class
 finalproject/view/AuthorForm$2.class
@@ -32,6 +38,7 @@ finalproject/view/Menu.class
 finalproject/controller/PersonController.class
 finalproject/view/CategoryForm$4.class
 finalproject/view/IntroScreen$Loading.class
+finalproject/view/PublisherForm.class
 finalproject/view/AuthorForm$4.class
 finalproject/view/Menu$3.class
 finalproject/model/Book.class
