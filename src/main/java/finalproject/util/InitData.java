@@ -111,7 +111,7 @@ public class InitData {
                 
         Book book1 = new Book();
         book1.setTitle("Dolazi nam proljeće");
-        book1.setPublished(2021);
+        book1.setPublished("2021");
         book1.setIsbn("978-953-500-234-6");
         book1.setCategory(category1);        
         book1.setAuthors(Arrays.asList(authors.get(new Random().nextInt(authors.size()))));
@@ -120,7 +120,7 @@ public class InitData {
         
         Book book2 = new Book();
         book2.setTitle("Godišnja doba");
-        book2.setPublished(2018);
+        book2.setPublished("2018");
         book2.setIsbn("978-953-500-237-3");
         book2.setCategory(category2);     
         book2.setAuthors(Arrays.asList(

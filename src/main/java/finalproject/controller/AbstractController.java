@@ -1,4 +1,3 @@
-
 package finalproject.controller;
 
 import finalproject.util.BookException;
@@ -35,32 +34,32 @@ public abstract class AbstractController <T> {
         validate();
         controlCreate();
         save();
-        return this.entity;
+        return entity;
     }
     
     public T update() throws BookException {
         validate();
         controlUpdate();
         save();
-        return this.entity;
+        return entity;
     }
     
     public boolean delete() throws BookException {
         controlDelete();
         session.beginTransaction();
-        session.delete(this.entity);
+        session.delete(entity);
         session.getTransaction().commit();
         return true;
     }
     
     private void save() {
         session.beginTransaction();
-        session.save(this.entity);
+        session.save(entity);
         session.getTransaction().commit();
     }
     
     private void validate() throws BookException {       
-         Set<ConstraintViolation<T>> constraintViolations = validator.validate(this.entity);
+         Set<ConstraintViolation<T>> constraintViolations = validator.validate(entity);
          
          if (constraintViolations.size() > 0) {         
             StringBuilder sb = new StringBuilder();

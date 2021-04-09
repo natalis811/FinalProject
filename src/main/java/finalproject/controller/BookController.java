@@ -1,8 +1,7 @@
 
 package finalproject.controller;
 
-
-import finalproject.model.Publisher;
+import finalproject.model.Book;
 import finalproject.util.BookException;
 import java.util.List;
 import org.hibernate.CacheMode;
@@ -11,18 +10,18 @@ import org.hibernate.CacheMode;
  *
  * @author natalis
  */
-public class PublisherController extends AbstractController<Publisher> {
+public class BookController extends AbstractController<Book> {
     
-    public PublisherController(){
+    public BookController (){
         super();
     }
-    public PublisherController(Publisher p){
-        super(p);
+    public BookController (Book b){
+        super(b);
     }
 
     @Override
-    public List<Publisher> getData() {
-        List<Publisher> list =session.createQuery("from Publisher").list();
+    public List<Book> getData() {
+        List<Book> list =session.createQuery("from Book").list();
         session.setCacheMode(CacheMode.IGNORE);
         return list;
        
@@ -35,16 +34,12 @@ public class PublisherController extends AbstractController<Publisher> {
 
     @Override
     protected void controlUpdate() throws BookException {
-        
+       
     }
 
     @Override
     protected void controlDelete() throws BookException {
         
     }
-
     
-        
-    }
-
-
+}

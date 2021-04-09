@@ -16,7 +16,7 @@ import javax.persistence.Table;
 public class Book extends AbstractEntity implements Serializable {
     
     private String title;
-    private Integer published;
+    private String published;
     private String isbn;
    
     @ManyToOne(optional = true) //znaci da nije obavezno staviti category  
@@ -40,11 +40,11 @@ public class Book extends AbstractEntity implements Serializable {
         this.title = title;
     }
 
-    public Integer getPublished() {
+    public String getPublished() {
         return published;
     }
 
-    public void setPublished(Integer published) {
+    public void setPublished(String published) {
         this.published = published;
     }
 
@@ -78,6 +78,11 @@ public class Book extends AbstractEntity implements Serializable {
 
     public void setPublisher(Publisher publisher) {
         this.publisher = publisher;
+    }
+    @Override
+    public String toString() {
+        
+       return  getTitle();
     }
     
 }

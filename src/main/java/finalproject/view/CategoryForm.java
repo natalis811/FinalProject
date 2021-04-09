@@ -1,4 +1,3 @@
-
 package finalproject.view;
 
 import finalproject.controller.CategoryController;
@@ -7,21 +6,16 @@ import finalproject.util.BookException;
 import javax.swing.DefaultListModel;
 import javax.swing.JOptionPane;
 
-/**
- *
- * @author natalis
- */
 public class CategoryForm extends javax.swing.JFrame {
 
     private CategoryController controller;
     
     public CategoryForm() {
         initComponents();
-        controller = new CategoryController (new Category());
-        setTitle(Application.TITLE_APP + "Category");
+        controller = new CategoryController();
+        setTitle(Application.TITLE_APP + " - Category");
         load();
     }
-
     
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
@@ -53,7 +47,7 @@ public class CategoryForm extends javax.swing.JFrame {
             }
         });
 
-        jbEdit.setText("Edit");
+        jbEdit.setText("Save");
         jbEdit.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jbEditActionPerformed(evt);
@@ -73,35 +67,32 @@ public class CategoryForm extends javax.swing.JFrame {
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 160, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jLabel1)
                     .addGroup(layout.createSequentialGroup()
-                        .addGap(39, 39, 39)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jLabel1)
-                            .addComponent(txtCategoryName, javax.swing.GroupLayout.PREFERRED_SIZE, 195, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(0, 0, Short.MAX_VALUE))
-                    .addGroup(layout.createSequentialGroup()
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                         .addComponent(jbAdd)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(jbEdit)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 18, Short.MAX_VALUE)
-                        .addComponent(jbDelete))))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(jbDelete))
+                    .addComponent(txtCategoryName, javax.swing.GroupLayout.PREFERRED_SIZE, 237, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(0, 12, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jScrollPane1)
+            .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 300, Short.MAX_VALUE)
             .addGroup(layout.createSequentialGroup()
-                .addGap(16, 16, 16)
+                .addGap(10, 10, 10)
                 .addComponent(jLabel1)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(txtCategoryName, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(47, 47, 47)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jbAdd)
                     .addComponent(jbEdit)
                     .addComponent(jbDelete))
-                .addContainerGap(160, Short.MAX_VALUE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
         pack();
@@ -109,8 +100,7 @@ public class CategoryForm extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jbEditActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbEditActionPerformed
-        if (controller.getEntity()==null || 
-                controller.getEntity().getId() == null) {
+        if (controller.getEntity() == null || controller.getEntity().getId() == null) {
             JOptionPane.showMessageDialog(rootPane, "Choose item first");
             return;
         }
@@ -155,19 +145,10 @@ public class CategoryForm extends javax.swing.JFrame {
     }//GEN-LAST:event_jbDeleteActionPerformed
 
     private void lstCategoryValueChanged(javax.swing.event.ListSelectionEvent evt) {//GEN-FIRST:event_lstCategoryValueChanged
-        if (evt.getValueIsAdjusting()) {
-            return;
-        }
-       
-        if (lstCategory.getSelectedValue() == null) {
-            return;
-        }
-        
-         controller.setEntity(lstCategory.getSelectedValue());
-        
-        txtCategoryName.setText(controller.getEntity().getName());
-        if (controller.getEntity().getName()!= null) {
-            txtCategoryName.setText(controller.getEntity().getName().toString());
+        if (evt.getValueIsAdjusting() || lstCategory.getSelectedValue() == null) { return; }               
+        controller.setEntity(lstCategory.getSelectedValue());        
+        if (controller.getEntity().getName() != null) {
+            txtCategoryName.setText(controller.getEntity().getName());
         } else {
             txtCategoryName.setText("");
         }
@@ -187,20 +168,16 @@ public class CategoryForm extends javax.swing.JFrame {
 
     private void load() {
         DefaultListModel<Category> m = new DefaultListModel<>();
-
         m.addAll(controller.getData());
-
-        lstCategory.setModel(m);
-        
+        lstCategory.setModel(m);        
     }
 
     private void setEntityAtributes() {
-        var entity=controller.getEntity();
-        
+        var entity = controller.getEntity();        
         entity.setName(txtCategoryName.getText());
     }
 
     private void clear() {
-        txtCategoryName.setText(" ");
+        txtCategoryName.setText("");
     }
 }

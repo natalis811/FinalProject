@@ -53,6 +53,11 @@ public class Menu extends javax.swing.JFrame {
         jmBookReview.add(jMenuItem1);
 
         jMenuItem2.setText("Book");
+        jMenuItem2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuItem2ActionPerformed(evt);
+            }
+        });
         jmBookReview.add(jMenuItem2);
 
         jMenuItem3.setText("Author");
@@ -111,6 +116,10 @@ public class Menu extends javax.swing.JFrame {
     private void jMenuItem4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem4ActionPerformed
         new PublisherForm().setVisible(true);
     }//GEN-LAST:event_jMenuItem4ActionPerformed
+
+    private void jMenuItem2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem2ActionPerformed
+        new BookForm().setVisible(true);
+    }//GEN-LAST:event_jMenuItem2ActionPerformed
 
     
 
