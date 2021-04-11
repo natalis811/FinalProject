@@ -26,7 +26,9 @@
           <Group type="102" alignment="1" attributes="0">
               <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
               <Component id="jbLogin" min="-2" max="-2" attributes="0"/>
-              <EmptySpace min="-2" pref="220" max="-2" attributes="0"/>
+              <EmptySpace min="-2" pref="37" max="-2" attributes="0"/>
+              <Component id="jbRegistration" min="-2" max="-2" attributes="0"/>
+              <EmptySpace min="-2" pref="86" max="-2" attributes="0"/>
           </Group>
           <Group type="102" attributes="0">
               <Group type="103" groupAlignment="0" attributes="0">
@@ -66,7 +68,10 @@
               <EmptySpace type="unrelated" max="-2" attributes="0"/>
               <Component id="pswPassword" min="-2" max="-2" attributes="0"/>
               <EmptySpace max="-2" attributes="0"/>
-              <Component id="jbLogin" min="-2" max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="3" attributes="0">
+                  <Component id="jbLogin" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="jbRegistration" alignment="3" min="-2" max="-2" attributes="0"/>
+              </Group>
               <EmptySpace max="-2" attributes="0"/>
           </Group>
       </Group>
@@ -108,6 +113,14 @@
         </Property>
         <Property name="text" type="java.lang.String" value="jLabel3"/>
       </Properties>
+    </Component>
+    <Component class="javax.swing.JButton" name="jbRegistration">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="REGISTRATION"/>
+      </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jbRegistrationActionPerformed"/>
+      </Events>
     </Component>
   </SubComponents>
 </Form>

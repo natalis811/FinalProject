@@ -47,7 +47,7 @@ public class CategoryForm extends javax.swing.JFrame {
             }
         });
 
-        jbEdit.setText("Save");
+        jbEdit.setText("Edit");
         jbEdit.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jbEditActionPerformed(evt);

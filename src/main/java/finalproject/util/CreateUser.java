@@ -17,10 +17,8 @@ public class CreateUser {
         u.setLastName("Santek");
         u.setEmail("natalis811@gmail.com");
         u.setPassword(BCrypt.hashpw("edunova", BCrypt.gensalt()));
-        u.setAdmin(true);
         
-        
-        
+                       
         UserController uc = new UserController();
         uc.setEntity(u);
         

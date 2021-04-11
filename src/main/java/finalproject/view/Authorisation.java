@@ -43,6 +43,7 @@ public class Authorisation extends javax.swing.JFrame {
         pswPassword = new javax.swing.JPasswordField();
         jbLogin = new javax.swing.JButton();
         jLabel3 = new javax.swing.JLabel();
+        jbRegistration = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -72,6 +73,13 @@ public class Authorisation extends javax.swing.JFrame {
         jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/bookpic.png"))); // NOI18N
         jLabel3.setText("jLabel3");
 
+        jbRegistration.setText("REGISTRATION");
+        jbRegistration.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jbRegistrationActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
@@ -79,7 +87,9 @@ public class Authorisation extends javax.swing.JFrame {
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                 .addGap(0, 0, Short.MAX_VALUE)
                 .addComponent(jbLogin)
-                .addGap(220, 220, 220))
+                .addGap(37, 37, 37)
+                .addComponent(jbRegistration)
+                .addGap(86, 86, 86))
             .addGroup(layout.createSequentialGroup()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
@@ -111,7 +121,9 @@ public class Authorisation extends javax.swing.JFrame {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(pswPassword, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jbLogin)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jbLogin)
+                    .addComponent(jbRegistration))
                 .addContainerGap())
         );
 
@@ -138,6 +150,10 @@ public class Authorisation extends javax.swing.JFrame {
         }
     }//GEN-LAST:event_pswPasswordKeyReleased
 
+    private void jbRegistrationActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbRegistrationActionPerformed
+        new UserForm().setVisible(true);
+    }//GEN-LAST:event_jbRegistrationActionPerformed
+
     
    
 
@@ -146,6 +162,7 @@ public class Authorisation extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JButton jbLogin;
+    private javax.swing.JButton jbRegistration;
     private javax.swing.JPasswordField pswPassword;
     private javax.swing.JTextField txtEmail;
     // End of variables declaration//GEN-END:variables

@@ -1,9 +1,11 @@
+finalproject/view/UserForm.class
 finalproject/Start.class
 finalproject/view/Application.class
 finalproject/view/PublisherForm$3.class
 finalproject/view/Authorisation$2.class
 finalproject/util/BookException.class
 finalproject/view/BookForm$3.class
+finalproject/view/UserForm$1.class
 finalproject/view/AuthorForm$1.class
 finalproject/model/Publisher.class
 finalproject/view/Menu$2.class
@@ -48,5 +50,7 @@ finalproject/view/BookForm$2.class
 finalproject/view/AuthorForm$2.class
 finalproject/controller/PersonController.class
 finalproject/view/BookForm.class
+finalproject/view/UserForm$2.class
+finalproject/view/Authorisation$4.class
 finalproject/view/PublisherForm.class
 finalproject/model/Book.class

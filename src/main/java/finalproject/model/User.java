@@ -14,25 +14,14 @@ import javax.validation.constraints.NotNull;
 @Table (name="user")
 public class User extends Person {
     
-    @NotNull(message = "Email cannot be NULL")
+    @NotNull(message = "Email cannot be null")
     @NotEmpty(message = "Email cannot be empty")
     private String email;
     
-    @NotNull(message = "Password cannot be NULL")
+    @NotNull(message = "Password cannot be null")
     @NotEmpty(message = "Password cannot be empty")
     private String password;
     
-    private boolean admin;
-
-    public boolean isAdmin() {
-        return admin;
-    }
-
-    public void setAdmin(boolean admin) {
-        this.admin = admin;
-    }
-    
-
     public String getEmail() {
         return email;
     }
