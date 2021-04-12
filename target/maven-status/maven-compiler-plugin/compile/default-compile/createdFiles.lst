@@ -4,6 +4,7 @@ finalproject/view/Application.class
 finalproject/view/PublisherForm$3.class
 finalproject/view/Authorisation$2.class
 finalproject/util/BookException.class
+finalproject/view/Menu$6.class
 finalproject/view/BookForm$3.class
 finalproject/view/UserForm$1.class
 finalproject/view/AuthorForm$1.class
@@ -11,6 +12,7 @@ finalproject/model/Publisher.class
 finalproject/view/Menu$2.class
 finalproject/controller/AbstractController.class
 finalproject/util/CreateUser.class
+finalproject/view/ReviewForm$3.class
 finalproject/view/CategoryForm$3.class
 finalproject/view/Authorisation.class
 finalproject/util/HibernateUtil.class
@@ -22,6 +24,7 @@ finalproject/view/AuthorForm.class
 finalproject/view/Menu.class
 finalproject/view/CategoryForm$4.class
 finalproject/view/IntroScreen$Loading.class
+finalproject/view/ReviewForm$2.class
 finalproject/view/AuthorForm$4.class
 finalproject/view/Menu$3.class
 finalproject/model/AbstractEntity.class
@@ -37,9 +40,12 @@ finalproject/view/AuthorForm$3.class
 finalproject/model/Author.class
 finalproject/view/PublisherForm$1.class
 finalproject/controller/BookController.class
+finalproject/controller/ReviewController.class
+finalproject/view/ReviewForm.class
 finalproject/model/Category.class
 finalproject/view/Authorisation$3.class
 finalproject/controller/CategoryController.class
+finalproject/view/Menu$7.class
 finalproject/view/Menu$5.class
 finalproject/model/Person.class
 finalproject/controller/UserController.class
@@ -49,6 +55,7 @@ finalproject/view/Authorisation$1.class
 finalproject/view/BookForm$2.class
 finalproject/view/AuthorForm$2.class
 finalproject/controller/PersonController.class
+finalproject/view/ReviewForm$1.class
 finalproject/view/BookForm.class
 finalproject/view/UserForm$2.class
 finalproject/view/Authorisation$4.class

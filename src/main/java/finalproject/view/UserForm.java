@@ -7,11 +7,12 @@ import org.mindrot.jbcrypt.BCrypt;
 
 public class UserForm extends javax.swing.JFrame {
     
-    private UserController userController;
+    private UserController controllerUser;
     
     public UserForm() {
         initComponents();
-        userController = new UserController();        
+        controllerUser = new UserController(); 
+        setTitle(Application.TITLE_APP + "User");
     }
     
     @SuppressWarnings("unchecked")
@@ -114,7 +115,7 @@ public class UserForm extends javax.swing.JFrame {
         u.setLastName(txtLastName.getText());
         u.setEmail(txtUserName.getText());
         u.setPassword(BCrypt.hashpw(new String (jpPassword.getPassword()), BCrypt.gensalt()));
-        u = userController.createUser(u);
+        u = controllerUser.createUser(u);
         
         if (u.getId() != null) {
             this.dispatchEvent(new WindowEvent(this, WindowEvent.WINDOW_CLOSING));

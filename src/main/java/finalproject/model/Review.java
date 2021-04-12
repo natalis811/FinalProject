@@ -62,6 +62,8 @@ public class Review extends AbstractEntity {
         this.user = user;
     }
     
-    
+    public String toString (){
+        return getText();
+    }
     
 }

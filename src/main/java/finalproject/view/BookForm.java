@@ -304,8 +304,8 @@ public class BookForm extends javax.swing.JFrame {
         txtTitle.setText("");
         txtPublished.setText("");
         txtIsbn.setText("");
-        //cmbCategory.set
-        //cmbPublisher.setEditable(false);
+        cmbCategory.setSelectedIndex(0);
+        cmbPublisher.setSelectedIndex(0);
         
     }
 
