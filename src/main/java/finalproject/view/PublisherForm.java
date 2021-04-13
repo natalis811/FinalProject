@@ -23,7 +23,7 @@ public class PublisherForm extends javax.swing.JFrame {
     
     public PublisherForm() {
         initComponents();
-        controller = new PublisherController (new Publisher());
+        controller = new PublisherController ();
         setTitle(Application.TITLE_APP + "Publisher");
         load();
     }

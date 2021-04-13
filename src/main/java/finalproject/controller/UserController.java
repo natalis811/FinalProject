@@ -19,6 +19,18 @@ public class UserController extends PersonController <User> {
         return BCrypt.checkpw(new String(password), user.getPassword()) ? user : null;
     }
     
+    public User findUser(String email) {
+        try {
+            User user = (User) session
+                    .createQuery("from User u where u.email=:email")
+                    .setParameter("email", email)
+                    .getSingleResult();
+            return user;
+        } catch (javax.persistence.NoResultException e) {
+            return null;
+        }
+    }
+    
     public User createUser (User u) {        
         session.beginTransaction();
         session.save(u);
@@ -32,6 +44,7 @@ public class UserController extends PersonController <User> {
         session.setCacheMode(CacheMode.IGNORE);
         return list; 
     }
+    
     @Override
     protected void controlDelete() throws BookException{
         

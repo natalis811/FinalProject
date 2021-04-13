@@ -27,7 +27,7 @@ public class BookForm extends javax.swing.JFrame {
     
     public BookForm() {
         initComponents();
-        controllerBook = new BookController (new Book());
+        controllerBook = new BookController ();
         controllerCategory = new CategoryController (new Category());
         controllerPublisher = new PublisherController (new Publisher());
         setTitle(Application.TITLE_APP + "Book");

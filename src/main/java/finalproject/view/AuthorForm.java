@@ -22,7 +22,7 @@ public class AuthorForm extends javax.swing.JFrame {
     
     public AuthorForm() {
         initComponents();
-        controller = new AuthorController (new Author());
+        controller = new AuthorController ();
         setTitle(Application.TITLE_APP + "Author");
         load();
     }

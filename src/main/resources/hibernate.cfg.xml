@@ -41,7 +41,7 @@
         <property name="hibernate.dbcp.minIdle">5</property>
         <property name="hibernate.dbcp.maxWaitMillis">-1</property>
 
-        <!-- Ovdje navodimo mapirane klase -->
+        
         <mapping class="finalproject.model.Author"/>
         <mapping class="finalproject.model.Book"/>
         <mapping class="finalproject.model.Category"/>  

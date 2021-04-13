@@ -2,6 +2,7 @@
 package finalproject.controller;
 
 
+import finalproject.model.Book;
 import finalproject.model.Publisher;
 import finalproject.util.BookException;
 import java.util.List;
@@ -40,6 +41,16 @@ public class PublisherController extends AbstractController<Publisher> {
 
     @Override
     protected void controlDelete() throws BookException {
+        if(!entity.getBook().isEmpty()){
+           StringBuilder sb = new StringBuilder();
+           sb.append("Publisher can not be deleted because is used by Book : ");
+           for(Book b : entity.getBook()){
+               sb.append(b.getPublisher());
+               sb.append(", ");
+           }
+           throw new BookException( sb.toString());
+       }
+        
         
     }
 

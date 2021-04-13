@@ -40,11 +40,6 @@ public class Menu extends javax.swing.JFrame {
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
         jmBookReview.setText("Menu");
-        jmBookReview.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jmBookReviewActionPerformed(evt);
-            }
-        });
 
         jMenuItem1.setText("Category");
         jMenuItem1.addActionListener(new java.awt.event.ActionListener() {
@@ -112,10 +107,6 @@ public class Menu extends javax.swing.JFrame {
         pack();
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
-
-    private void jmBookReviewActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jmBookReviewActionPerformed
-              
-    }//GEN-LAST:event_jmBookReviewActionPerformed
 
     private void jMenuItem1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem1ActionPerformed
         new CategoryForm().setVisible(true);

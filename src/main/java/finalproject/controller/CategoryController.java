@@ -1,5 +1,6 @@
 package finalproject.controller;
 
+import finalproject.model.Book;
 import finalproject.model.Category;
 import finalproject.util.BookException;
 import java.util.List;
@@ -34,6 +35,15 @@ public class CategoryController extends AbstractController<Category> {
 
     @Override
     protected void controlDelete() throws BookException {
+        if(!entity.getBook().isEmpty()){
+           StringBuilder sb = new StringBuilder();
+           sb.append("Category can not be deleted because is used by Book : ");
+           for(Book b : entity.getBook()){
+               sb.append(b.getCategory());
+               sb.append(", ");
+           }
+           throw new BookException( sb.toString());
+       }
         
     }    
         
