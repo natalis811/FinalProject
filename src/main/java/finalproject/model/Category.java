@@ -22,7 +22,7 @@ public class Category extends AbstractEntity {
     @NotEmpty (message="Category name can not be empty")
     private String name;
     
-     @OneToMany(mappedBy = "category")
+    @OneToMany(mappedBy = "category")
     private List<Book> book = new ArrayList<>();
 
     public List<Book> getBook() {

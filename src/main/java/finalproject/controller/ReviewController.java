@@ -1,7 +1,9 @@
 
 package finalproject.controller;
 
+import finalproject.model.Book;
 import finalproject.model.Review;
+import finalproject.model.User;
 import finalproject.util.BookException;
 import java.util.List;
 import org.hibernate.CacheMode;
@@ -29,9 +31,8 @@ public class ReviewController extends AbstractController<Review> {
     @Override
     protected void controlCreate() throws BookException {
         
-    }
-
-    @Override
+       }
+     @Override
     protected void controlUpdate() throws BookException {
         
     }
@@ -41,4 +42,23 @@ public class ReviewController extends AbstractController<Review> {
          
     }
     
+    public Review findReview(Book book, User user) {
+        try {
+            Review review = (Review) session
+                    .createQuery("from Review r where r.book=:book and r.user=:user")
+                    .setParameter("book", book)
+                    .setParameter("user", user)
+                    .getSingleResult();
+            return review;
+        } catch (Exception e) {
+            return null;
+        }
+    }
+        
 }
+
+   
+    
+
+
+

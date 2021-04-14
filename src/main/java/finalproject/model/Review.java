@@ -4,7 +4,10 @@ package finalproject.model;
 import java.util.Date;
 import javax.persistence.Entity;
 import javax.persistence.ManyToOne;
+import javax.persistence.OneToMany;
 import javax.persistence.Table;
+import javax.validation.constraints.NotEmpty;
+import javax.validation.constraints.NotNull;
 
 /**
  *
@@ -14,13 +17,20 @@ import javax.persistence.Table;
 @Table (name="review")
 public class Review extends AbstractEntity {
     
+    @NotNull (message= " Review text can not be null")
+    @NotEmpty (message= "Review text can not be empty")
     private String text;
+    
     private Integer rating;
+    
+    @NotNull (message= " Review date can not be null")
     private Date date;
+    
     @ManyToOne
     private Book book; //vise recenzija za 1 knjigu
     @ManyToOne
     private User user; //vise recenzija od 1 korisnika?
+    
 
     public String getText() {
         return text;

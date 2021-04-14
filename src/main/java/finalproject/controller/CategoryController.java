@@ -37,7 +37,7 @@ public class CategoryController extends AbstractController<Category> {
     protected void controlDelete() throws BookException {
         if(!entity.getBook().isEmpty()){
            StringBuilder sb = new StringBuilder();
-           sb.append("Category can not be deleted because is used by Book : ");
+           sb.append("Category can not be deleted because is used in Book : ");
            for(Book b : entity.getBook()){
                sb.append(b.getCategory());
                sb.append(", ");

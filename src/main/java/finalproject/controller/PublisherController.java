@@ -43,7 +43,7 @@ public class PublisherController extends AbstractController<Publisher> {
     protected void controlDelete() throws BookException {
         if(!entity.getBook().isEmpty()){
            StringBuilder sb = new StringBuilder();
-           sb.append("Publisher can not be deleted because is used by Book : ");
+           sb.append("Publisher can not be deleted because is used in Book : ");
            for(Book b : entity.getBook()){
                sb.append(b.getPublisher());
                sb.append(", ");

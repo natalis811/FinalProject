@@ -35,7 +35,6 @@ public class Menu extends javax.swing.JFrame {
         jMenuItem3 = new javax.swing.JMenuItem();
         jMenuItem4 = new javax.swing.JMenuItem();
         jMenuItem5 = new javax.swing.JMenuItem();
-        jMenuItem6 = new javax.swing.JMenuItem();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -73,21 +72,13 @@ public class Menu extends javax.swing.JFrame {
         });
         jmBookReview.add(jMenuItem4);
 
-        jMenuItem5.setText("Review");
+        jMenuItem5.setText("Reviews");
         jMenuItem5.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jMenuItem5ActionPerformed(evt);
             }
         });
         jmBookReview.add(jMenuItem5);
-
-        jMenuItem6.setText("User");
-        jMenuItem6.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jMenuItem6ActionPerformed(evt);
-            }
-        });
-        jmBookReview.add(jMenuItem6);
 
         jMenuBar1.add(jmBookReview);
 
@@ -125,12 +116,8 @@ public class Menu extends javax.swing.JFrame {
     }//GEN-LAST:event_jMenuItem2ActionPerformed
 
     private void jMenuItem5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem5ActionPerformed
-        new ReviewForm().setVisible(true);
+        new ReviewsForm().setVisible(true);
     }//GEN-LAST:event_jMenuItem5ActionPerformed
-
-    private void jMenuItem6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem6ActionPerformed
-        //new UserForm().setVisible(true); 
-    }//GEN-LAST:event_jMenuItem6ActionPerformed
 
     
 
@@ -141,7 +128,6 @@ public class Menu extends javax.swing.JFrame {
     private javax.swing.JMenuItem jMenuItem3;
     private javax.swing.JMenuItem jMenuItem4;
     private javax.swing.JMenuItem jMenuItem5;
-    private javax.swing.JMenuItem jMenuItem6;
     private javax.swing.JMenu jmBookReview;
     // End of variables declaration//GEN-END:variables
 }

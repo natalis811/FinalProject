@@ -9,6 +9,7 @@ import javax.persistence.JoinColumn;
 import javax.persistence.JoinTable;
 import javax.persistence.ManyToMany;
 import javax.persistence.ManyToOne;
+import javax.persistence.OneToMany;
 import javax.persistence.Table;
 
 @Entity
@@ -19,7 +20,7 @@ public class Book extends AbstractEntity implements Serializable {
     private String published;
     private String isbn;
    
-    @ManyToOne(optional = true) //znaci da nije obavezno staviti category  
+    @ManyToOne
     private Category category; //vise knjiga ista kategorija
     
     @ManyToMany
@@ -31,6 +32,7 @@ public class Book extends AbstractEntity implements Serializable {
     
     @ManyToOne(optional = true)
     private Publisher publisher; //vise knjiga 1 izdavac
+    
 
     public String getTitle() {
         return title;
