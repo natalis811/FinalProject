@@ -13,6 +13,7 @@ import java.util.Date;
 import java.util.Locale;
 import javax.swing.DefaultComboBoxModel;
 import javax.swing.JOptionPane;
+import org.jdesktop.swingx.autocomplete.AutoCompleteDecorator;
 
 public class ReviewForm extends javax.swing.JFrame {
 
@@ -215,6 +216,7 @@ public class ReviewForm extends javax.swing.JFrame {
         Book b = new Book();
         b.setId(-1L);
         b.setTitle("Choose title");
+        AutoCompleteDecorator.decorate(cmbBook);
         m.addElement(b);
         new BookController().getData().forEach(bm->{
             m.addElement(bm);

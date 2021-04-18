@@ -31,7 +31,7 @@ public class Review extends AbstractEntity {
     @ManyToOne
     private User user; //vise recenzija od 1 korisnika?
     
-
+    
     public String getText() {
         return text;
     }

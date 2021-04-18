@@ -33,7 +33,7 @@ public class Book extends AbstractEntity implements Serializable {
     @ManyToOne(optional = true)
     private Publisher publisher; //vise knjiga 1 izdavac
     
-
+    
     public String getTitle() {
         return title;
     }

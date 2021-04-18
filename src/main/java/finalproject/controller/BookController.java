@@ -40,6 +40,7 @@ public class BookController extends AbstractController<Book> {
     @Override
     protected void controlDelete() throws BookException {
         
+        
     }
     
 }

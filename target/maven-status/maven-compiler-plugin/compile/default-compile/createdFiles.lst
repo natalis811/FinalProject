@@ -21,6 +21,7 @@ finalproject/view/CategoryForm.class
 finalproject/controller/PublisherController.class
 finalproject/view/AuthorForm.class
 finalproject/view/Menu.class
+finalproject/view/BookForm$4.class
 finalproject/view/CategoryForm$4.class
 finalproject/view/IntroScreen$Loading.class
 finalproject/view/ReviewForm$2.class

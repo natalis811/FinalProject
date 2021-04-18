@@ -91,6 +91,11 @@ public class BookForm extends javax.swing.JFrame {
         });
 
         jbDelete.setText("Delete");
+        jbDelete.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jbDeleteActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -237,6 +242,21 @@ public class BookForm extends javax.swing.JFrame {
             JOptionPane.showMessageDialog(rootPane, b.getMessage());
         }
     }//GEN-LAST:event_jbEditActionPerformed
+
+    private void jbDeleteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbDeleteActionPerformed
+        if (controllerBook.getEntity()==null || controllerBook.getEntity().getId() == null) {
+            JOptionPane.showMessageDialog(rootPane, "Choose item first");
+            return;
+        }
+
+        try {
+            controllerBook.delete();
+            clear();
+            loadBookEntities();
+        } catch (BookException b) {
+            JOptionPane.showMessageDialog(rootPane, b.getMessage());
+        }
+    }//GEN-LAST:event_jbDeleteActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables

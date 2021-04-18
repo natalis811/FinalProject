@@ -111,7 +111,12 @@
             <version>0.3.2</version>
         </dependency>
 
-
+        <!-- https://mvnrepository.com/artifact/org.swinglabs.swingx/swingx-all -->
+        <dependency>
+            <groupId>org.swinglabs.swingx</groupId>
+            <artifactId>swingx-all</artifactId>
+            <version>1.6.5-1</version>
+        </dependency>
 
     </dependencies>
     <name>FinalProject</name>
