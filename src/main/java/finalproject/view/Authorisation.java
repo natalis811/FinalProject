@@ -195,7 +195,7 @@ public class Authorisation extends javax.swing.JFrame {
            errorControl(pswPassword,"Email and password are not correct!");
            return;
        }
-        u.setPassword(null);
+        //u.setPassword(null);
         Application.user=u;
         new Menu(u).setVisible(true);
         dispose();
